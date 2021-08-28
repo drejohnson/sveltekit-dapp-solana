@@ -1,3 +1,5 @@
 <slot />
 
-<stype lang="postcss" global> @import '../app.postcss'; </stype>
+<style lang="postcss" global>
+	@import '../app.postcss';
+</style>
