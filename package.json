@@ -35,7 +35,12 @@
 	"type": "module",
 	"dependencies": {
 		"@solana/wallet-adapter-base": "^0.5.0",
-		"@solana/wallet-adapter-wallets": "^0.7.0",
-		"@solana/web3.js": "^1.24.1"
+		"@solana/wallet-adapter-mathwallet": "^0.5.0",
+		"@solana/wallet-adapter-phantom": "^0.5.0",
+		"@solana/wallet-adapter-solflare": "^0.2.0",
+		"@solana/wallet-adapter-sollet": "^0.5.0",
+		"@solana/wallet-adapter-solong": "^0.5.0",
+		"@solana/web3.js": "^1.24.1",
+		"buffer": "^6.0.3"
 	}
 }
