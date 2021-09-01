@@ -49,3 +49,7 @@ export const getBalance = async (publicKey: PublicKey): Promise<number> => {
 export function shortenAddress(address: string, chars = 4): string {
 	return `${address.slice(0, chars)}...${address.slice(-chars)}`;
 }
+
+export function displayAddress(publicKey: PublicKey): string {
+	return publicKey?.toBase58();
+}

@@ -2,7 +2,7 @@
 	import { createEventDispatcher } from 'svelte';
 
 	export let id = 'toggle';
-	export let text = 'Toggle';
+	export let text = '';
 	export let on: string = undefined;
 	export let off: string = undefined;
 	export let checked = false;
@@ -29,9 +29,11 @@
 				on:change={() => (checked = !checked)}
 			/>
 			<!-- line -->
-			<div class="block bg-gray-600 w-14 h-8 rounded-full" />
+			<div class="block bg-gray-600 w-10 h-6 rounded-3xl" />
 			<!-- dot -->
-			<div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition" />
+			<div
+				class="dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition"
+			/>
 		</div>
 		<!-- label -->
 		<div class="ml-3 text-gray-700 font-medium">

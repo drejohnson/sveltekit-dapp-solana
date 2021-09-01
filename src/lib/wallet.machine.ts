@@ -140,7 +140,10 @@ export const walletMachine = walletModel.createMachine({
 					target: 'disconnected',
 					actions: [setWalletInfo]
 				},
-				onError: {}
+				onError: {
+					target: 'disconnected',
+					actions: [() => console.log('onError')]
+				}
 			}
 		},
 

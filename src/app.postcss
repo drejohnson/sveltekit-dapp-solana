@@ -1,4 +1,72 @@
 @tailwind base;
 /* Write your global styles here, in PostCSS syntax */
+body {
+	/* background: rgb(23, 23, 23); */
+	background: rgb(12, 0, 44);
+	background: linear-gradient(
+		25deg,
+		rgba(12, 0, 44, 1) 0%,
+		rgba(17, 17, 17, 1) 100%
+	);
+	color: white;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+button {
+	font-weight: bold;
+}
+
+.modal-open {
+	overflow-y: hidden;
+}
+
 @tailwind components;
-@tailwind utilities
+@tailwind utilities;
+
+@layer components {
+	.nav-link {
+		@apply font-medium leading-6;
+	}
+	.gradient-bg {
+		@apply bg-gradient-to-r from-indigo-400 via-red-300 to-red-500;
+	}
+	.gradient-text {
+		@apply bg-gradient-to-r from-indigo-400 via-red-300 to-red-500 bg-clip-text text-fill-color;
+	}
+	.fieldset {
+		@apply relative mt-10;
+	}
+	.label {
+		@apply text-gray-600 text-2xl capitalize;
+	}
+	.input {
+		@apply bg-transparent h-10 w-full border-b-2 border-gray-700 text-gray-600 focus:outline-none placeholder-gray-500;
+	}
+	.icon {
+		@apply fill-current w-4 h-4;
+	}
+	.loader svg path,
+	.loader svg rect {
+		fill: rgba(248, 113, 113, 1);
+	}
+}
+
+@layer utilities {
+	.text-fill-color {
+		-webkit-text-fill-color: transparent;
+	}
+	.scroll-snap-none {
+		scroll-snap-type: none;
+	}
+	.scroll-snap-x {
+		scroll-snap-type: x;
+	}
+	.scroll-snap-y {
+		scroll-snap-type: y;
+	}
+}
